@@ -6,8 +6,8 @@ import kartingText from '../textContent';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
-    <main className={`flex min-h-screen items-center justify-center bg-white mt-12 mb-12 ml-36 mr-36 ${inter.className}`}>
+  return (  
+    <main className={`flex min-h-screen items-center justify-center bg-white ml-36 mr-36 ${inter.className}`}>
       <div className="flex items-center justify-center w-full">
         <div className="text-left p-8 flex-grow flex-basis-2/3">
           <p className="text-black">{kartingText}</p>
