@@ -7,9 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (  
-    <div className="flex flex-col min-h-screen justify-center bg-white ml-36 mr-36">
 
-      <main className={`flex flex-1 items-center justify-center bg-white  ${inter.className}`}>  {/* ml-16 mr-16 */}
+      <main className={`${inter.className}`}>  {/* ml-16 mr-16 */}
 
           <div className="flex items-center justify-center w-full">
             <div className="text-left p-8 flex-grow flex-basis-2/3">
@@ -22,6 +21,6 @@ export default function Home() {
       </main>   
 
 
-    </div> 
+
   )
 }
