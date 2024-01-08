@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }) {
   return(
     <>
       <Navbarbottom />
-      <Component {...pageProps} />
+      <div className="body-pattern min-h-screen">
+        <Component {...pageProps} />
+      </div>
     </>
   ) 
 }
