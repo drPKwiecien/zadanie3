@@ -1,13 +1,16 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel CSS
 
 export default function ImageCarousel({ images }) {
-  return (
-    <div className="w-64 carousel rounded-box">
-      {images.map((image, index) => (
-        <div key={index} className="carousel-item w-full">
-          <img src={image.src} className="w-full" alt={image.alt} />
-        </div>
-      ))}
-    </div>
-  );
-}
+    return (
+      <Carousel>
+        {images.map((image, index) => (
+          <div key={index} style={{ padding: '5px' }}> {/* Add padding here */}
+            <img src={image.src} alt={image.alt} style={{ width: 'auto', height: 'auto' }} />
+          </div>
+        ))}
+      </Carousel>
+    );
+  }
+  

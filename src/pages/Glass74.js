@@ -1,6 +1,6 @@
 
 import { Inter } from 'next/font/google'
-import {Glass74Text1} from '../textContent';
+import {Glass74Text1, Glass74Text2} from '../textContent';
 import ImageCarousel from '../components/ImageCarousel';
 
 const images = [
@@ -22,6 +22,9 @@ export default function Omnie() {
             </div>
             <div>
                 <ImageCarousel images={images} />
+            </div>
+            <div className="text-left p-8 flex-grow flex-basis-3/4">
+              <p className="text-black">{Glass74Text2}</p>
             </div>
           </div>
       </main>   

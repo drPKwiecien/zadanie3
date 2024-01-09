@@ -44,3 +44,7 @@ th, td {
     padding: 4px; /* Smaller padding for smaller screens */
   }
 }
+.carousel-root {
+  padding: 0;
+  margin: 10px 0; /* Adjust this as needed */
+}
