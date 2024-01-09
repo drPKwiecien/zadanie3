@@ -10,6 +10,5 @@ export default function Ranking() {
           <h1>Ranking Torów Kartingowych</h1>
       </header>
       <TrackTable />  
-      ;
     </main>
   }
