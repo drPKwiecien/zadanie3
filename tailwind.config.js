@@ -12,6 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        oceanBlue: '#0077B6', // Replace with your desired shade of ocean blue
+      },
     },
   },
   plugins: [require("daisyui")],
