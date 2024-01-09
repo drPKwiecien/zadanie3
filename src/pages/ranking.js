@@ -1,4 +1,4 @@
-import Daisytable from '../components/tabledaisy';
+import TrackTable from '../components/TrackTable';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,7 +9,7 @@ export default function Ranking() {
       <header className="text-center mb-4">
           <h1>Ranking Torów Kartingowych</h1>
       </header>
-      <Daisytable />  
+      <TrackTable />  
       ;
     </main>
   }
