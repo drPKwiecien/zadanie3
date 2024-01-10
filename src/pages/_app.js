@@ -11,7 +11,9 @@ export default function App({ Component, pageProps }) {
         <div className="central-container flex flex-1 items-center justify-center bg-white  min-h-screen">
           <Component {...pageProps} />
         </div>
-        <Navbarbottom />
+        <div className='navbar-bottom'>
+          <Navbarbottom />
+        </div>
       </div>
     </>
   );
