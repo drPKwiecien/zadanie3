@@ -4,9 +4,10 @@ import TableButton from '../components/TableButton';
 
 const TrackTable = () => {
     const tracks = [
-        { rank: 1, name: 'Glass74 Karting', type: 'Outdoor', date: '2022-12-15', content: {images: ['/pictures/gass1.jpg', '/pictures/gass2.jpg']}, opis: <TableButton href='/Glass74'></TableButton> },
-        { rank: 2, name: 'Karting 932 Alicante', type: 'Indoor', date: '2022-12-17', content: {images: ['/pictures/alicante1.jpg', '/pictures/alicante2.jpg']} , opis: <TableButton href='/Karting932'></TableButton>},
-        { rank: 3, name: 'Indoor Karting Barcelona', type: 'Indoor', date: '2023-11-09', content: {videos: ['/movies/barcelona1.mp4']} , opis: <TableButton href='/IKBarcelona'></TableButton>},
+        { rank: 1, name: 'Glass74 Karting', type: 'Outdoor', date: '2022-12-15', content: {images: ['/pictures/gass1.jpg', '/pictures/gass2.jpg']}, opis: <TableButton href='/posts/gass74'></TableButton> },
+        { rank: 2, name: 'Karting 932 Alicante', type: 'Indoor', date: '2022-12-17', content: {images: ['/pictures/alicante1.jpg', '/pictures/alicante2.jpg']} , opis: <TableButton href='/posts/karting932'></TableButton>},
+        { rank: 3, name: 'Indoor Karting Barcelona', type: 'Indoor', date: '2023-11-09', content: {videos: ['/movies/barcelona1.mp4']} , opis: <TableButton href='/posts/ikbarcelona'></TableButton>},
+        { rank: 4, name: 'Kraków WRT', type: 'Indoor', date: '2022-03-15', content: {images: ['/pictures/krakowWRT1.jpg']} , opis: <TableButton href='/posts/krakowWRT'></TableButton>},
     ];
     return (
         <table>
