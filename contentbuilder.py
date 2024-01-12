@@ -24,7 +24,7 @@ def build_posts_json(posts_path):
                         posts[slug]['textPart1'] = docx_content
                     else:
                         posts[slug]['textPart2'] = docx_content
-                if item.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
+                if item.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.mp4')):
                     posts[slug]['images'].append({
                         'src': f'/posts/{slug}/{item}',
                         'alt': f'Image for {slug}'
