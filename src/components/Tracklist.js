@@ -7,6 +7,7 @@ const tracks = [
       name: 'Glass74 Karting', 
       type: 'Outdoor', 
       date: '2022-12-15', 
+      score: '2.0',
       imageUrl: '/pictures/gass1.jpg',
       url: '/posts/gass74'
     },
@@ -15,6 +16,7 @@ const tracks = [
       name: 'Karting 932 Alicante',
       type: 'Indoor',
       date: '2022-12-17',
+      score: '7.5',
       imageUrl: '/pictures/alicante1.jpg',
       url: '/posts/karting932'
     },
@@ -23,6 +25,7 @@ const tracks = [
       name: 'Indoor Karting Barcelona', 
       type: 'Indoor', 
       date: '2023-11-09', 
+      score: '7.0',
       imageUrl: '/pictures/barcelona1.jpg', 
       url: '/posts/ikbarcelona'
     },
@@ -30,7 +33,8 @@ const tracks = [
       rank: 4, 
       name: 'Kraków WRT', 
       type: 'Indoor',
-      date: '2022-03-15', 
+      date: '2022-03-15',
+      score: '6.0', 
       imageUrl: '/pictures/krakowWRT1.jpg', 
       url: '/posts/krakowWRT'
     },
@@ -46,6 +50,7 @@ export default function Tracklist() {
             name={track.name}
             type={track.type}
             date={track.date} 
+            score={track.score}
             imageUrl={track.imageUrl}  
             url={track.url} 
           />
