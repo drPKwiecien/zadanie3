@@ -2,7 +2,7 @@
     "gass74": {
         "images": [
             {
-                "src": "/posts/gass74/gass1.jpg",
+                "src": "/posts/gass74/gass1COVER.jpg",
                 "alt": "Image for gass74",
                 "type": "image"
             },
@@ -18,14 +18,14 @@
     "ikbarcelona": {
         "images": [
             {
-                "src": "/posts/ikbarcelona/barcelona1.jpg",
-                "alt": "Image for ikbarcelona",
-                "type": "image"
-            },
-            {
                 "src": "/posts/ikbarcelona/barcelona1.mp4",
                 "alt": "Video for ikbarcelona",
                 "type": "video"
+            },
+            {
+                "src": "/posts/ikbarcelona/barcelona1cover.jpg",
+                "alt": "Image for ikbarcelona",
+                "type": "image"
             },
             {
                 "src": "/posts/ikbarcelona/barcelona2.png",
@@ -39,7 +39,7 @@
     "karting932": {
         "images": [
             {
-                "src": "/posts/karting932/alicante1.jpg",
+                "src": "/posts/karting932/alicante1cover.jpg",
                 "alt": "Image for karting932",
                 "type": "image"
             },
@@ -55,7 +55,7 @@
     "krakowWRT": {
         "images": [
             {
-                "src": "/posts/krakowWRT/krakowWRT1.jpg",
+                "src": "/posts/krakowWRT/krakowWRT1cover.jpg",
                 "alt": "Image for krakowWRT",
                 "type": "image"
             },
