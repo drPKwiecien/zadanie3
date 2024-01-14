@@ -2,6 +2,7 @@ import os
 import json
 from docx import Document
 
+
 def read_docx(file_path):
     doc = Document(file_path)
     full_text = []
@@ -42,8 +43,8 @@ def build_json_files(posts_path):
                             part_key = f'textPart{text_part_counter}'
                             posts[slug][part_key] = part.strip()
                             text_part_counter += 1
-                elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.mp4', '.webm', '.ogg')):
-                    media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')) else 'video'
+                elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic', '.mp4', '.webm', '.mov')):
+                    media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else 'video'
                     posts[slug]['images'].append({
                         'src': f'/posts/{slug}/{item}',
                         'alt': f'{media_type.title()} for {slug}',
