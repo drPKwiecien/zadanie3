@@ -7,7 +7,8 @@
         "type": "Indoor",
         "date": "2023-06-10",
         "score": "0.5",
-        "city": "Zamo\u015b\u0107"
+        "city": "Zamo\u015b\u0107",
+        "countrycode": "PL"
     },
     {
         "url": "/posts/TSKdocklands",
@@ -17,7 +18,8 @@
         "type": "Indoor",
         "date": "2022-12-09",
         "score": "9.0",
-        "city": "Londyn"
+        "city": "Londyn",
+        "countrycode": "GB"
     },
     {
         "url": "/posts/gass74",
@@ -27,7 +29,8 @@
         "type": "Outdoor",
         "date": "2022-12-15",
         "score": "2.0",
-        "city": "Villena"
+        "city": "Villena",
+        "countrycode": "ES"
     },
     {
         "url": "/posts/ikbarcelona",
@@ -37,7 +40,8 @@
         "type": "Indoor",
         "date": "2023-11-09",
         "score": "7.0",
-        "city": "Barcelona"
+        "city": "Barcelona",
+        "countrycode": "ES"
     },
     {
         "url": "/posts/karting932",
@@ -47,7 +51,8 @@
         "type": "Indoor",
         "date": "2022-12-17",
         "score": "7.5",
-        "city": "Alicante"
+        "city": "Alicante",
+        "countrycode": "ES"
     },
     {
         "url": "/posts/krakowWRT",
@@ -57,6 +62,7 @@
         "type": "Indoor",
         "date": "2022-03-15",
         "score": "6.5",
-        "city": "Krak\u00f3w"
+        "city": "Krak\u00f3w",
+        "countrycode": "PL"
     }
 ]

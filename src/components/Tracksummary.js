@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Flag from 'react-flagkit';
 
-export function TrackSummary({ rank, name, type, date, score, imageUrl, url, city }) {
+
+
+export function TrackSummary({ rank, name, type, date, score, imageUrl, url, city, countrycode }) {
     return (
         <div>
           <Link href={url} className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -22,7 +25,10 @@ export function TrackSummary({ rank, name, type, date, score, imageUrl, url, cit
                   </div>
                   <div className="flex justify-between mb-3">
                     <p className="mb-3 text-lg font-bold text-gray-700 dark:text-gray-400">Ocena: {score}</p>
-                    <p className="mb-3 text-gray-700 dark:text-gray-400">{city}</p>
+                    <div className="flex items-center">
+                        <p className="mb-3 text-gray-700 dark:text-gray-400 mr-2">{city}</p>
+                        <Flag country={countrycode} className="mb-[10px]"/>
+                    </div>
                   </div>
               </div>
           </Link>

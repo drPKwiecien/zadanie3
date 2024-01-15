@@ -13,7 +13,7 @@ def read_docx(file_path):
 
 def extract_track_info(docx_parts):
     track_info = {}
-    keys_for_track = ['name', 'type', 'date', 'score', 'city']
+    keys_for_track = ['name', 'type', 'date', 'score', 'city', 'countrycode']
     for part in docx_parts:
         if ':' in part:
             key, value = part.split(':', 1)
