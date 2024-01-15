@@ -6,7 +6,8 @@
         "name": "Cartway Zamo\u015b\u0107",
         "type": "Indoor",
         "date": "2023-06-10",
-        "score": "0.5"
+        "score": "0.5",
+        "city": "Zamo\u015b\u0107"
     },
     {
         "url": "/posts/TSKdocklands",
@@ -15,7 +16,8 @@
         "name": "TeamSport Docklands",
         "type": "Indoor",
         "date": "2022-12-09",
-        "score": "9.0"
+        "score": "9.0",
+        "city": "Londyn"
     },
     {
         "url": "/posts/gass74",
@@ -24,7 +26,8 @@
         "name": "Gass74 Karting",
         "type": "Outdoor",
         "date": "2022-12-15",
-        "score": "2.0"
+        "score": "2.0",
+        "city": "Villena"
     },
     {
         "url": "/posts/ikbarcelona",
@@ -33,7 +36,8 @@
         "name": "Indoor Karting Barcelona",
         "type": "Indoor",
         "date": "2023-11-09",
-        "score": "7.0"
+        "score": "7.0",
+        "city": "Barcelona"
     },
     {
         "url": "/posts/karting932",
@@ -42,7 +46,8 @@
         "name": "Karting 932 Alicante",
         "type": "Indoor",
         "date": "2022-12-17",
-        "score": "7.5"
+        "score": "7.5",
+        "city": "Alicante"
     },
     {
         "url": "/posts/krakowWRT",
@@ -51,6 +56,7 @@
         "name": "Krak\u00f3w WRT",
         "type": "Indoor",
         "date": "2022-03-15",
-        "score": "6.5"
+        "score": "6.5",
+        "city": "Krak\u00f3w"
     }
 ]

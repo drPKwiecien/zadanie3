@@ -16,6 +16,7 @@ export default function Tracklist() {
             score={track.score}
             imageUrl={track.imageUrl}  
             url={track.url} 
+            city={track.city}
           />
         </div>
       ))}
