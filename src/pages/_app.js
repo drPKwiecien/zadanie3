@@ -1,5 +1,7 @@
 import '@/styles/globals.css'
 import Navbarbottom from '../components/Navbarbottom'
+import { Analytics } from '@vercel/analytics/react';
+
 
 export default function App({ Component, pageProps }) {
   return (
@@ -19,5 +21,19 @@ export default function App({ Component, pageProps }) {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <title>Next.js</title>
+      </head>
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
   );
 }
