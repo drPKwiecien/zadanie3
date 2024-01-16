@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   return (
+    <>
     <div className="flex flex-col h-screen">
       <div className="flex-grow pb-16">
         <div className='body-pattern'>
@@ -21,19 +22,8 @@ export default function App({ Component, pageProps }) {
         </div>
       </div>
     </div>
+    <Analytics />
+    </>
   );
 }
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head>
-        <title>Next.js</title>
-      </head>
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  );
-}
