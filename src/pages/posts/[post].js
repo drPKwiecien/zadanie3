@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { Inter } from 'next/font/google';
 import ImageCarousel2 from '../../components/ImageCarousel2';
+import SVP from '../../components/SimpleVideoPlayer';
+
 import { getPostContent, getAllPostSlugs } from '../../lib/posts';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,6 +22,8 @@ const Post = ({ postData }) => {
     ) : null;
   };
 
+
+
   return (
     <main className={`${inter.className}`}>
       <div className="flex flex-col items-center justify-center w-full">
@@ -36,6 +40,9 @@ const Post = ({ postData }) => {
         {renderTextPart(postData.textPart6)}
         {renderTextPart(postData.textPart7)}
         {renderTextPart(postData.textPart8)}
+        <div>
+          <SVP images={postData.images} />
+        </div>
  
       </div>
     </main>
