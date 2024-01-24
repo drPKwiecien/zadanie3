@@ -33,6 +33,9 @@ const Post = ({ postData }) => {
         {renderTextPart(postData.textPart3)}
         {renderTextPart(postData.textPart4)}
         {renderTextPart(postData.textPart5)}
+        {renderTextPart(postData.textPart6)}
+        {renderTextPart(postData.textPart7)}
+        {renderTextPart(postData.textPart8)}
  
       </div>
     </main>
