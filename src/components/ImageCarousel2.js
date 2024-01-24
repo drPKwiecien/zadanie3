@@ -8,10 +8,18 @@ export default function ImageCarousel2({ images }) {
     return /\.(mp4|webm|ogg)$/i.test(url);
   };
 
+  const isLap = (url) => {
+    return /LAP.*\.mp4$/i.test(url);
+  };
+
+  const shouldDisplayItem = (url) => {
+    return !isLap(url);
+  };
+
   return (
     <div>
       <div className="w-96 carousel rounded-box">
-        {images.map((media, index) => (
+      {images.filter(({ src }) => shouldDisplayItem(src)).map((media, index) => (
           <div key={index} id={`item${index + 1}`} className="carousel-item w-full">
             {!isVideo(media.src) ? (
               // Render an image if the media is not a video
@@ -23,15 +31,15 @@ export default function ImageCarousel2({ images }) {
                 layout="responsive"
               />
             ) : (
-              // Render a video if the media is a video
+              // Render a video if the media is a video but does not contain 'LAP' in name
               <div className='player-wrapper'>
-                <ReactPlayer
-                  className='react-player'
-                  url={media.src}
-                  width='100%'
-                  height='100%'
-                  controls // Show video controls
-                />
+                  <ReactPlayer
+                    className='react-player'
+                    url={media.src}
+                    width='100%'
+                    height='100%'
+                    controls // Show video controls
+                  />
               </div>
             )}
           </div>
@@ -39,7 +47,7 @@ export default function ImageCarousel2({ images }) {
       </div>
 
       <div className="flex justify-center w-full py-2 gap-2">
-        {images.map((_, index) => (
+      {images.filter(({ src }) => shouldDisplayItem(src)).map((_, index) => (
           <a key={index} href={`#item${index + 1}`} className="btn btn-xs">{index + 1}</a>
         ))}
       </div>
