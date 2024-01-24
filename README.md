@@ -8,11 +8,12 @@ Wyzwania:
 
 1. zastąpić docx plikiem tekstowym z korektą w VSC
 2. tekst w poście nie rozbija się na paragrafy
+3. chcemy mieć posty jako unikalne kombinacje tekstu/zdjęć/karuzel
 
 
 W przyszłości:
 
-1. można dodać kraj jako flagę do TrackSummary
+1. można dodać kraj jako flagę do TrackSummary - done
 2. Filtrowanie torów w rankingu po kraju
 3. Sortowanie rankingu po ocenie lub dacie
 4. możliwość zapisu na newsletter z nowym wpisem

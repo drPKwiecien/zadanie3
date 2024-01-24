@@ -12,18 +12,28 @@ const Post = ({ postData }) => {
     return <div>Loading...</div>;
   }
 
+  const renderTextPart = (text) => {
+    return text ? (
+      <div className="text-left p-4 flex-grow flex-basis-3/4">
+        <p className="text-black">{text}</p>
+      </div>
+    ) : null;
+  };
+
   return (
     <main className={`${inter.className}`}>
       <div className="flex flex-col items-center justify-center w-full">
         <div className="text-left p-8 flex-grow flex-basis-3/4">
-          <p className="text-black">{postData.textPart1}</p>
+          <p className="font-bold text-black ">{postData.textPart1}</p>
         </div>
         <div>
           <ImageCarousel2 images={postData.images} />
         </div>
-        <div className="text-left p-8 flex-grow flex-basis-3/4">
-          <p className="text-black">{postData.textPart2}</p>
-        </div>
+        {renderTextPart(postData.textPart2)}
+        {renderTextPart(postData.textPart3)}
+        {renderTextPart(postData.textPart4)}
+        {renderTextPart(postData.textPart5)}
+ 
       </div>
     </main>
   );
