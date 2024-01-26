@@ -4,25 +4,36 @@ import tracks from '../data/tracks.json';
 
 export default function Tracklist() {
   const [sortOption, setSortOption] = useState('');
+  const [sortDirection, setSortDirection] = useState('descending');
+
 
   const sortedTracks = [...tracks].sort((a, b) => {
+    let comparison = 0;
     if (sortOption === 'score') {
-      return b.score - a.score; // Descending
+      comparison = b.score - a.score; // Descending
     } else if (sortOption === 'date') {
-      return new Date(a.date) - new Date(b.date); // Ascending
+      comparison = new Date(b.date) - new Date(a.date); // Descending
     } else if (sortOption === 'country') {
-      return a.countrycode.localeCompare(b.countrycode); // Alphabetically by country code
+      comparison = b.countrycode.localeCompare(a.countrycode); // Alphabetically by country code - descending
     }
-    return 0;
+    if (sortDirection === 'ascending') {
+      return -comparison;
+    }
+
+    return comparison;
   });
+
+  const toggleSortDirection = () => {
+    setSortDirection((prevDirection) => (prevDirection === 'descending' ? 'ascending' : 'descending'));
+  };
 
   return (
     <div>
-      <div className="mb-4">
+      <div className="flex mb-4 items-center">
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="form-select form-select-lg mb-3"
+          className="form-select form-select-lg mb-1"
           aria-label=".form-select-lg example"
         >
           <option value="">Sortuj</option>
@@ -30,6 +41,9 @@ export default function Tracklist() {
           <option value="date">Data</option>
           <option value="country">Kraj</option>
         </select>
+        <button onClick={toggleSortDirection} className="btn border-black text-black bg-transparent hover:bg-transparent hover:border-oceanBlue hover:text-oceanBlue btn-secondary mb-1 ml-2">
+          {sortDirection === 'ascending' ? '↑' : '↓'}
+        </button>
       </div>
       {sortedTracks.map((track) => (
         <div key={track.rank} className="mb-4">
