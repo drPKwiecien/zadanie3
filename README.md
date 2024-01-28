@@ -24,6 +24,7 @@ Biażące zadania:
     tak to działa obecnie na mojej stronie w wordpress (przemyslawkwiecien.pl)
 6. Przeczytaj sekcję Adding Interactivity z dokumentacji Reacta
 7. W komponencie karuzeli spróbuj skorzystać z React useState do podświetlenia numeru obrazka
+8. Wykorzystanie api
 
 
 
@@ -33,7 +34,6 @@ W przyszłości:
 2. możliwość zapisu na newsletter z nowym wpisem
 3. możliwość dodawania komentarzy pod wpisem z opcją autoryzacji
 4. możliwość oceny torów przez użytkowników -> na stronie toru
-6. dodanie przekierowania na przemyslawkwiecien.pl w sekcji "O mnie"
 
 
 

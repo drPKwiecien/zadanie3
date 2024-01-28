@@ -20,7 +20,13 @@ export default function Omnie() {
                   <Button href={"https://przemyslawkwiecien.pl"} copy={'Sprawdź!'}/>
                 </div>
               </div>
+              <div className="text-center mt-20">  
+                  <Button href={"/politykaprywatnosci"} copy={'Polityka Prywatności'} />
+                  <Button href={"/prawaautorskie"} copy={'Prawa Autorskie'} />
+                  <Button href={"/disclaimer"} copy={'Disclaimer'}/>
+              </div>
             </div>
+
             <div className="p-4 flex-grow flex-basis-1/4">
               <Image src="/omnie.jpg" alt="Main Karting Image" width={900} height={600} />
             </div>
