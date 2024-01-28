@@ -7,6 +7,9 @@ const omnieText = `Jestem fanem sportów motorowych, w aktywnym tego słowa znac
 Jeżdżąc po Polsce i Europie staram się zawsze odwiedzić jakiś tor kartingowy i recenzje przedstawić Wam!`;
 export {omnieText};
 
+const omnieText2 = `Moją drugą pasją jest gospodarka i rynki finansowe - nimi zajmuję się zawodowo. Jeśli chcesz być na bieżąco, koniecznie odwiedź przemyslawkwiecien.pl`;
+export {omnieText2};
+
 const Glass74Text1 = `Najgorszy tor w Hiszpanii`;
 export {Glass74Text1};
 

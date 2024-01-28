@@ -8,17 +8,34 @@ Obecne problemy
 Wyzwania:
 
 1. zastąpić docx plikiem tekstowym z korektą w VSC
-2. tekst w poście nie rozbija się na paragrafy
+2. obecna konfiguracja backendu nie daje możliwości np pogrubiania, czu wstawiania linków do konkretnego miejsca w tekście
 3. chcemy mieć posty jako unikalne kombinacje tekstu/zdjęć/karuzel
+
+
+Biażące zadania:
+
+1. Przeczytać sekcję Typography z dokumentacji TailwindCSS - done
+2. Spróbować dodać odpowiednią typografię do strony. - done
+3. Dopracować header i stworzyć footer - tutaj mam wątpliwości bo tak jak jest teraz podoba mi się, strony porówywarkowe moim zdaniem powinny być proste - do dyskusji
+4. Stworzyć podstrony "Polityka prywatności", "Prawa autorskie" i "Disclaimer"
+5. Stworzyć podstrony "Rejestracja" i "Logowanie" - nie chciałbym logowania, ale:
+    a) możliwość akceptowania komentarzy 
+    b) zapis na nowy post
+    tak to działa obecnie na mojej stronie w wordpress (przemyslawkwiecien.pl)
+6. Przeczytaj sekcję Adding Interactivity z dokumentacji Reacta
+7. W komponencie karuzeli spróbuj skorzystać z React useState do podświetlenia numeru obrazka
+
 
 
 W przyszłości:
 
-1. można dodać kraj jako flagę do TrackSummary - done
-2. Filtrowanie torów w rankingu po kraju
-3. Sortowanie rankingu po ocenie lub dacie
-4. możliwość zapisu na newsletter z nowym wpisem
-5. możliwość dodawania komentarzy pod wpisem z opcją autoryzacji
+1. Filtrowanie torów w rankingu po kraju
+2. możliwość zapisu na newsletter z nowym wpisem
+3. możliwość dodawania komentarzy pod wpisem z opcją autoryzacji
+4. możliwość oceny torów przez użytkowników -> na stronie toru
 6. dodanie przekierowania na przemyslawkwiecien.pl w sekcji "O mnie"
 
 
+
+
+ChangeLog
