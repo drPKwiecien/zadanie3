@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         oceanBlue: '#0077B6', // Replace with your desired shade of ocean blue
       },
+      fontFamily: {
+        'roboto-slab': ['Roboto Slab', 'serif'],
+      },
     },
   },
   plugins: [require("daisyui")],

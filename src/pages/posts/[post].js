@@ -28,7 +28,7 @@ const Post = ({ postData }) => {
     <main className={`${inter.className}`}>
       <div className="flex flex-col items-center justify-center w-full">
         <div className="text-left p-8 flex-grow flex-basis-3/4">
-          <p className="font-bold text-black ">{postData.textPart1}</p>
+          <p className="font-bold text-black font-sans ">{postData.textPart1}</p>
         </div>
         <div>
           <ImageCarousel2 images={postData.images} />

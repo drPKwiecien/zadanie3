@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
 
-
-export default function pokemon() {
+export default function PokemonTest() {
 
   const [pokemons, setPokemons] = useState([]);
 
@@ -14,7 +13,14 @@ export default function pokemon() {
           throw new Error("!!!")
         }
         const data = await response.json();
-        setPokemons(data.results);
+        const pokemonDetails = await Promise.all(
+          data.results.map(async (pokemon) => {
+            const pokemonResponse = await fetch(pokemon.url);
+            return pokemonResponse.json();
+          })
+        );  
+
+        setPokemons([...pokemonDetails].sort((a, b) => a.name.localeCompare(b.name)));
       }
       catch (error) {
         console.error(error);
@@ -28,15 +34,14 @@ export default function pokemon() {
   return (
     <main className="">  
         <div className="flex items-center justify-center w-full">
-          <div className="text-left p-8 flex-grow flex-basis-3/4">
-            <ol>
-              {
-                pokemons.map(pokemon => (
-                //   <PokemonCard name={pokemon.name} url={pokemon.url} />
-                  <li key={pokemon.name}> {pokemon.name} </li>
-                ))
-              }
-            </ol>
+
+          <div>
+                {pokemons.map(pokemon => (
+                    <div key={pokemon.name}>
+                        <h2>{pokemon.name}</h2>
+                        <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+                    </div>
+                ))}
           </div>
 
         </div>
