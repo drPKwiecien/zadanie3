@@ -15,6 +15,7 @@ export function TrackSummary({ rank, name, type, date, score, imageUrl, url, cit
                     width={384}
                     height={384}
                     alt=""
+                    priority
                   />
               </div>
               <div className="flex flex-col justify-between p-4 leading-normal w-full">
