@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import ReactPlayer from 'react-player/lazy'; // Lazy load the video player
 
 export default function ImageCarousel2({ images }) {
+
+  const [activeIndex, setActiveIndex] = useState(0); // State to track active image
+  // Function to set active index
+  const setActive = (index) => {
+    setActiveIndex(index);
+  };
+
   // Helper function to determine if the URL is a video based on the extension
   const isVideo = (url) => {
     return /\.(mp4|webm|ogg)$/i.test(url);
@@ -48,7 +55,12 @@ export default function ImageCarousel2({ images }) {
 
       <div className="flex justify-center w-full py-2 gap-2">
       {images.filter(({ src }) => shouldDisplayItem(src)).map((_, index) => (
-          <a key={index} href={`#item${index + 1}`} className="btn btn-xs">{index + 1}</a>
+          <a 
+          key={index} 
+          href={`#item${index + 1}`} 
+          className={`btn btn-xs ${index === activeIndex ? 'bg-oceanBlue' : ''}`}
+          onClick={() => setActive(index)} // Set active index on click
+          >{index + 1}</a>
         ))}
       </div>
     </div>
