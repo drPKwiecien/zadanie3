@@ -10,39 +10,34 @@ export {omnieText};
 const omnieText2 = `Moją drugą pasją jest gospodarka i rynki finansowe - nimi zajmuję się zawodowo. Jeśli chcesz być na bieżąco, koniecznie odwiedź przemyslawkwiecien.pl`;
 export {omnieText2};
 
-const Glass74Text1 = `Najgorszy tor w Hiszpanii`;
-export {Glass74Text1};
-
-const Glass74Text2 = `Jedno z większych rozczarowań. Na zdjęciach i nawet na żywo tor wygląda zachęcająco (to te szerokie kolorowe tralki) - 
-jest szeroko i mogłoby być fajnie i szybko. Niestety, wózki to złom - brak hamulca jeszcze byłbym w stanie przeżyć, 
-ale brak opon już nie. Wymiana wózka nic nie dała, więc to raczej nie "bad luck". Zatem szczerze nie polecam. Szczególnie za 25e/10min`;
-export {Glass74Text2};
-
-const Karting932Text1 = `Fajne elektryczne gokarty`;
-export {Karting932Text1};
-
-const Karting932Text2 = `Południowcy z oczywistych względów większość torów mają otwartych, a tu nowy zamknięty obiekt - musiałem zatem go odwiedzić 🙂 
-Wózki elektryczne - ja wolę spalinowe, ale te były w perfekcyjnym stanie i zapeniły fajny trening (w elektryku należy unikać całkowitego puszczenia gazu 
-    bo wtedy gokart bardzo zwalnia). Byłem tam w sobotę rano, nie było nikogo innego i manager (mimo że nie mówił słowa po angielsku 😉 ) zaproponował mi wspólny race!
-     🙂 Wow, uwielbiam ich pasję do tego sportu. Na minus jedynie dość krótka nitka, która pomimo dość ciasnej konfiguracji jest jedynie na 26 sekund.
-      Wyobrażam sobie, że przy 8-10 wózkach (szczególnie z przypadkowymi osobami) frajda z jazdy może tam szyko zniknąć. `;
-export {Karting932Text2};
 
 
-const IKBarcelonaText1 = `Ciekawy, techniczny tor`;
-export {IKBarcelonaText1};
+const politykaPrywatnosci = {
+    paragraf1: { tekst: `Administratorem Twoich danych osobowych na stronie kartrank.pl jest Przemysław Kwiecień. 
+    Napisz do mnie maila na adres dr.pkwiecien@gmail.com jeśli masz jakiekolwiek pytania dotyczące polityki bezpieczeństwa. Użyj tego adresu również 
+    jeśli chcesz otrzymać swoje dane w celu wglądu lub jeśli chcesz ich usunięcia.` },
+    paragraf2: { tekst: `Strona kartrank.pl nie używa plików cookies` },
+    paragraf3: { tekst: `Dane osobowe mogą być zbierane są w celu:`, styl: `bold` },
+    paragraf4: { tekst: `-> Prowadzenia newslettera, który służy powiadomieniu użytkownika o nowym wpisie lub potencjalnie o kampanii promocyjnej partnera strony. 
+    W każdym powiadomieniu użytkownik będzie mieć opcję wycofania zgody na przetwarzanie danych osobowych`, styl: `italic` },
+    paragraf5: { tekst: `-> Umożliwienia użytkownikowi zamieszczania komentarzy pod wpisami – do tego celu konieczne jest zostawienie swojego imienia lub pseudonimu oraz adresu email`, styl: `italic` },
+    paragraf6: { tekst: `-> Śledzenia ruchu na stronie`, styl: `italic` },
+    paragraf7: { tekst: `Newsletter może zawierać odnośniki do innych stron. Strona kartrank.pl nie ponosi odpowiedzialności za zamieszczane tam informacje i stosowanie polityki prywatności.
+    Ponadto za treści ewentualnych przekazów reklamowych odpowiada reklamodawca.` },
+    paragraf8: { tekst: `W celu ochrony danych osobowych użytkowników strony kartrank.pl podjęte zostały środki techniczne (Ochrona Anty-DDoS oraz Certyfikat SSL )
+    oraz procesowe - prowadzenie rejestru czynności przetwarzania danych osobowych, wykazu powierzeń danych osobowych oraz ewidencji incydentów naruszania bezpieczeństwa danych osobowych.
+    Na stronie umieszczone są odpowiednie klauzule informacyjne oraz pola służące do wyrażenia zgód na przetwarzanie danych osobowych.
+    Administrator danych osobowych nie będzie ich udostępniać stronom trzecim poza sytuacjami wymaganymi prawnie` },
+    // ...
+  };
+export {politykaPrywatnosci};
 
-const IKBarcelonaText2 = `Ten tor reklamowany jest jako "najlepszy halowy w Europie".
-Okazał się niezły, ale z pewnością nie najlepszy. Na plus ciekawa angażująca nitka z dwoma rampami (wielopoziomowością bym jednak tego nie nazwał). 
-Na minus - jak niemal wszędzie - losowe wózki (jeden miał walnięty układ kierowniczy). 
-Na 100% Karting Carlos Sainz w Madrycie jest lepszy (ten duży, nie w La Rochas). 
-A o tytuł halowego nr1 w Europie walczy moim zdaniem E1GOKART Gokarty Chorzów - kiedy wreszcie będą tam szybsze wózki`;
-export {IKBarcelonaText2};
 
-const PolitykaPrywtanosci = `Administratorem Twoich danych osobowych na stronie kartrank.pl jest Przemysław Kwiecień. 
+
+const PolitykaPrywtanosci0 = `Administratorem Twoich danych osobowych na stronie kartrank.pl jest Przemysław Kwiecień. 
 Napisz do mnie maila na adres dr.pkwiecien@gmail.com jeśli masz jakiekolwiek pytania dotyczące polityki bezpieczeństwa. Użyj tego adresu również 
 jeśli chcesz otrzymać swoje dane w celu wglądu lub jeśli chcesz ich usunięcia.`; 
-export {PolitykaPrywtanosci};
+export {PolitykaPrywtanosci0};
 
 const PolitykaPrywtanosci1 =
 'Strona kartrank.pl nie używa plików cookies, ';

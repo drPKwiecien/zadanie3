@@ -1,25 +1,26 @@
-import {PolitykaPrywtanosci,PolitykaPrywtanosci2,PolitykaPrywtanosci1,PolitykaPrywtanosci3,PolitykaPrywtanosci4,PolitykaPrywtanosci5,PolitykaPrywtanosci6,PolitykaPrywtanosci7} from '../textContent';
+import {politykaPrywatnosci} from '../textContent';
 
 export default function PolitykaPrywanotsci() {
-    return (
-      <main>  
+  const renderParagraph = (paragraf) => {
+    switch (paragraf.styl) {
+      case "italic":
+        return <p className="italic mb-2">{paragraf.tekst}</p>;
+      case "bold":
+        return <p className="font-bold mb-4">{paragraf.tekst}</p>;
+      default:
+        return <p className="mb-1">{paragraf.tekst}</p>;
+    }
+  };
 
-          <div className="flex items-center justify-center w-full">
-            <div className="text-left p-8 flex-grow flex-basis-3/4">
-
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci1}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci2}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci3}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci4}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci5}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci6}</p>
-                <p className="text-black font-roboto-slab mb-2">{PolitykaPrywtanosci7}</p>
-                
-            </div>
-          </div>
-      </main>   
-
-
-    )
-  }
+  return (
+    <main>
+      <div className="flex items-center justify-center w-full">
+        <div className="text-left p-8 flex-grow flex-basis-3/4">
+          {Object.values(politykaPrywatnosci).map((paragraf, index) => (
+            <div key={index}>{renderParagraph(paragraf)}</div>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}

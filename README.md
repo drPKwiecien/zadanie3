@@ -17,7 +17,7 @@ Biażące zadania:
 1. Przeczytać sekcję Typography z dokumentacji TailwindCSS - done
 2. Spróbować dodać odpowiednią typografię do strony. - done
 3. Dopracować header i stworzyć footer - tutaj mam wątpliwości bo tak jak jest teraz podoba mi się, strony porówywarkowe moim zdaniem powinny być proste - do dyskusji
-4. Stworzyć podstrony "Polityka prywatności", "Prawa autorskie" i "Disclaimer"
+4. Stworzyć podstrony "Polityka prywatności", "Prawa autorskie" i "Disclaimer" - done 
 5. Stworzyć podstrony "Rejestracja" i "Logowanie" - nie chciałbym logowania, ale:
     a) możliwość akceptowania komentarzy 
     b) zapis na nowy post
