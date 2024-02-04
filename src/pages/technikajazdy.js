@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Edukacja() {
+export default function TechnikaJazdy() {
     const searchQuery = 'HOW TO WIN GO KARTING'; 
 
 
