@@ -15,7 +15,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center w-full">
             <div className="text-center p-8 flex-grow md:flex-basis-2/3">
               <p className="text-black mb-10">{kartingText}</p>
-              <Button href={"/ranking"} copy={'Znajdź najlepszy tor!'}/>
+              <div className="flex flex-col">
+                <Button href={"/ranking"} copy={'Znajdź najlepszy tor!'}/>
+                <Button href={"/edukacja"} copy={'Co warto wiedzieć?'}/>
+              </div>
             </div>
             <div className="p-4 flex-grow md:flex-grow-0 md:flex-basis-1/3">
               <Image src="/kartmainpic.png" alt="Main Karting Image" width={1200} height={600} />

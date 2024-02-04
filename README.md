@@ -24,7 +24,7 @@ Biażące zadania:
     tak to działa obecnie na mojej stronie w wordpress (przemyslawkwiecien.pl)
 6. Przeczytaj sekcję Adding Interactivity z dokumentacji Reacta **done**
 7. W komponencie karuzeli spróbuj skorzystać z React useState do podświetlenia numeru obrazka - **done** (jeszcze ta składnia mocno nieintuicyjna, więc pomoc chata)
-8. Wykorzystanie api
+8. Wykorzystanie api  **done** - było sporo zabawy z kluczem API
 
 
 
@@ -41,3 +41,4 @@ W przyszłości:
 
 ChangeLog
 29.01.24 - dodanie priority do Image w TrackSummary oraz redirect z omnie na ranking (pod seo) do next.config.js
+04.02.24 - dodałem stronę technikajazdy bazującą na wyszukaniu z YT przez api, ale raczej nie będę tego używać
