@@ -1,4 +1,4 @@
-import Tracklist from '../components/Tracklist';
+import Tracklist from '../components/Tracklist3';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,3 +14,4 @@ export default function Test() {
       </main>
     )
   }
+

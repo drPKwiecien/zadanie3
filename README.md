@@ -42,3 +42,4 @@ W przyszłości:
 ChangeLog
 29.01.24 - dodanie priority do Image w TrackSummary oraz redirect z omnie na ranking (pod seo) do next.config.js
 04.02.24 - dodałem stronę technikajazdy bazującą na wyszukaniu z YT przez api, ale raczej nie będę tego używać
+04.02.24 - dodanie strony edukacja z kompenentem YouTube 
