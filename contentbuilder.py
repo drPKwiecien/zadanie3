@@ -44,12 +44,12 @@ def build_json_files(posts_path):
                             posts[slug][part_key] = part.strip()
                             text_part_counter += 1
                 elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic', '.mp4', '.webm', '.mov')):
-                    media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else 'video'
+                    media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else f'video/{item.split(".")[-1]}'
                     posts[slug]['images'].append({
                         'src': f'/posts/{slug}/{item}',
                         'alt': f'{media_type.title()} for {slug}',
                         'type': media_type
-                    })
+                    }) 
                     if 'COVER' in item.upper() and not cover_image_found:
                         track['imageUrl'] = f'/posts/{slug}/{item}'
                         cover_image_found = True

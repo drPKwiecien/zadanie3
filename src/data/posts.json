@@ -3,8 +3,8 @@
         "images": [
             {
                 "src": "/posts/CartwayZamosc/IMG_7714.mp4",
-                "alt": "Video for CartwayZamosc",
-                "type": "video"
+                "alt": "Video/Mp4 for CartwayZamosc",
+                "type": "video/mp4"
             },
             {
                 "src": "/posts/CartwayZamosc/Screenshot 2024-01-14 104925cover.png",
@@ -24,8 +24,8 @@
         "images": [
             {
                 "src": "/posts/KartLandGR/GGQRJBmvb1S8gFABAIYC4S2_ditqbmdjAAAF.mp4",
-                "alt": "Video for KartLandGR",
-                "type": "video"
+                "alt": "Video/Mp4 for KartLandGR",
+                "type": "video/mp4"
             },
             {
                 "src": "/posts/KartLandGR/kartlandCOVER.jpg",
@@ -69,8 +69,8 @@
             },
             {
                 "src": "/posts/Portimao/IMG_8467.mp4",
-                "alt": "Video for Portimao",
-                "type": "video"
+                "alt": "Video/Mp4 for Portimao",
+                "type": "video/mp4"
             },
             {
                 "src": "/posts/Portimao/IMG_8469.jpg",
@@ -89,8 +89,8 @@
             },
             {
                 "src": "/posts/Portimao/LAPvideo.mp4",
-                "alt": "Video for Portimao",
-                "type": "video"
+                "alt": "Video/Mp4 for Portimao",
+                "type": "video/mp4"
             }
         ],
         "textPart1": "Kartodromo Internacional de Algarve - Czy tak wygl\u0105da motoryzacyjne niebo?",
@@ -130,8 +130,8 @@
         "images": [
             {
                 "src": "/posts/SainzLaRojas/650787385327975.mp4",
-                "alt": "Video for SainzLaRojas",
-                "type": "video"
+                "alt": "Video/Mp4 for SainzLaRojas",
+                "type": "video/mp4"
             },
             {
                 "src": "/posts/SainzLaRojas/lr1.png",
@@ -161,8 +161,8 @@
             },
             {
                 "src": "/posts/SainzMadrid/DIWD4942.MP4",
-                "alt": "Video for SainzMadrid",
-                "type": "video"
+                "alt": "Video/Mp4 for SainzMadrid",
+                "type": "video/MP4"
             },
             {
                 "src": "/posts/SainzMadrid/im1.png",
@@ -176,13 +176,13 @@
             },
             {
                 "src": "/posts/SainzMadrid/PHLB3793.MP4",
-                "alt": "Video for SainzMadrid",
-                "type": "video"
+                "alt": "Video/Mp4 for SainzMadrid",
+                "type": "video/MP4"
             },
             {
                 "src": "/posts/SainzMadrid/XJWE1491.MP4",
-                "alt": "Video for SainzMadrid",
-                "type": "video"
+                "alt": "Video/Mp4 for SainzMadrid",
+                "type": "video/MP4"
             }
         ],
         "textPart1": "Wielki Sainz i jego wspania\u0142y obiekt",
@@ -255,8 +255,8 @@
         "images": [
             {
                 "src": "/posts/ikbarcelona/barcelona1.mp4",
-                "alt": "Video for ikbarcelona",
-                "type": "video"
+                "alt": "Video/Mp4 for ikbarcelona",
+                "type": "video/mp4"
             },
             {
                 "src": "/posts/ikbarcelona/barcelona1cover.jpg",
