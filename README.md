@@ -30,7 +30,6 @@ Biażące zadania:
 
 W przyszłości:
 
-1. Filtrowanie torów w rankingu po kraju - **testing**
 2. możliwość zapisu na newsletter z nowym wpisem
 3. możliwość dodawania komentarzy pod wpisem z opcją autoryzacji
 4. możliwość oceny torów przez użytkowników -> na stronie toru
@@ -43,7 +42,7 @@ ChangeLog
 29.01.24 - dodanie priority do Image w TrackSummary oraz redirect z omnie na ranking (pod seo) do next.config.js
 04.02.24 - dodałem stronę technikajazdy bazującą na wyszukaniu z YT przez api, ale raczej nie będę tego używać
 04.02.24 - dodanie strony edukacja z kompenentem YouTube 
-09.02.24 - dodanie filtrowania - wstępna wersja
+09.02.24 - dodanie filtrowania 
 
 
 

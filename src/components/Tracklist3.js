@@ -77,20 +77,12 @@ export default function Tracklist() {
         value={minScore}
         onChange={handleScoreChange}
         className="form-input"
-        style={{
-          backgroundColor: 'var(--input-background-color)',
-          color: 'var(--input-font-color)'
-        }}
         placeholder="Podaj minimalną ocenę"
       />
       <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
             className="form-select form-select-lg mb-1"
-            style={{
-              backgroundColor: 'var(--input-background-color)',
-              color: 'var(--input-font-color)'
-            }}
             aria-label=".form-select-lg example"
         >
             <option value="">Sortuj</option>
