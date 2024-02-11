@@ -7,7 +7,7 @@ import Flag from 'react-flagkit';
 export function TrackSummary({ rank, name, type, date, score, imageUrl, url, city, countrycode }) {
     return (
         <div>
-          <Link href={url} className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <Link href={url} className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-0.5">
               <div className="w-full md:w-80">
                   <Image 
                     className="object-cover w-full rounded-t-lg h-96 md:h-48 md:rounded-none md:rounded-s-lg" 

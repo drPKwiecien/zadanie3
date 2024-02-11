@@ -1,8 +1,11 @@
+
 import { useState } from 'react';
 import tracks from '../data/tracks.json';
 import { TrackSummary } from './Tracksummary';
 import Flag from 'react-flagkit'; 
-import Select from 'react-select'; // Example, you might need to adjust based on the actual library
+import Select from 'react-select';
+
+
 
 export default function Tracklist() {
   const [selectedCountries, setSelectedCountries] = useState([]);
@@ -10,16 +13,15 @@ export default function Tracklist() {
   const [sortOption, setSortOption] = useState('');
   const [sortDirection, setSortDirection] = useState('descending');
 
-  // Adjust this to match the structure expected by your multi-select component
-  const countryOptions = [
-    // This should be populated with your available countries and their codes
-    { value: 'PL', label: <span><Flag country="PL" /></span> },
-    { value: 'ES', label: <span><Flag country="ES" /></span> },
-    { value: 'PT', label: <span><Flag country="PT" /></span> },
-    { value: 'GR', label: <span><Flag country="GR" /></span> },
-    { value: 'GB', label: <span><Flag country="GB" /></span> },
-    // Add other countries similarly
-  ];
+  const countryOptions = tracks.reduce((options, track) => {
+    if (!options.find(option => option.value === track.countrycode)) {
+      options.push({ value: track.countrycode, label: <span><Flag country={track.countrycode} /></span> });
+    }
+    return options;
+  }, []);
+
+
+
 
   const handleCountryChange = (selectedOptions) => {
     setSelectedCountries(selectedOptions.map(option => option.value));
@@ -75,12 +77,20 @@ export default function Tracklist() {
         value={minScore}
         onChange={handleScoreChange}
         className="form-input"
+        style={{
+          backgroundColor: 'var(--input-background-color)',
+          color: 'var(--input-font-color)'
+        }}
         placeholder="Podaj minimalną ocenę"
       />
       <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
             className="form-select form-select-lg mb-1"
+            style={{
+              backgroundColor: 'var(--input-background-color)',
+              color: 'var(--input-font-color)'
+            }}
             aria-label=".form-select-lg example"
         >
             <option value="">Sortuj</option>
@@ -90,13 +100,14 @@ export default function Tracklist() {
         </select>
         <button
             onClick={() => toggleSortDirection()}
-            className="btn border-black text-black bg-transparent hover:bg-transparent hover:border-oceanBlue hover:text-oceanBlue btn-secondary mb-1 ml-2"
+            className="btn border-black text-black bg-transparent hover:bg-transparent hover:border-oceanBlue hover:text-oceanBlue mb-1 ml-2"
         >
             {sortDirection === 'ascending' ? '↑' : '↓'}
         </button>
-      {sortedTracks.map(track => (
+      {sortedTracks.map((track, index) => (
         <TrackSummary key={track.rank} {...track} />
       ))}
     </div>
   );
 }
+

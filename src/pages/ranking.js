@@ -10,7 +10,7 @@ export default function Test() {
         <header className="text-center mb-4">
             <h1>Ranking Torów Kartingowych</h1>
         </header>
-          <Tracklist />
+          <Tracklist className="m-1"/>
       </main>
     )
   }

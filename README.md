@@ -51,10 +51,3 @@ ChangeLog
 
 
 
-
-Komendy gita
-
-git add (-p)
-
-git commit
-
