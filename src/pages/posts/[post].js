@@ -1,7 +1,9 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import { Inter } from 'next/font/google';
 import ImageCarousel2 from '../../components/ImageCarousel2';
 import SVP from '../../components/SimpleVideoPlayer';
+import ReactMarkdown from 'react-markdown';
 
 import { getPostContent, getAllPostSlugs } from '../../lib/posts';
 
@@ -14,10 +16,12 @@ const Post = ({ postData }) => {
     return <div>Loading...</div>;
   }
 
+
+
   const renderTextPart = (text) => {
     return text ? (
       <div className="text-left p-4 flex-grow flex-basis-3/4">
-        <p className="text-black">{text}</p>
+        <ReactMarkdown className="text-black">{text}</ReactMarkdown>
       </div>
     ) : null;
   };
@@ -40,6 +44,12 @@ const Post = ({ postData }) => {
         {renderTextPart(postData.textPart6)}
         {renderTextPart(postData.textPart7)}
         {renderTextPart(postData.textPart8)}
+        {renderTextPart(postData.textPart9)}
+        {renderTextPart(postData.textPart10)}
+        {renderTextPart(postData.textPart11)}
+        {renderTextPart(postData.textPart12)}
+        {renderTextPart(postData.textPart13)}
+        {renderTextPart(postData.textPart14)}
         <div>
           <SVP images={postData.images} />
         </div>
