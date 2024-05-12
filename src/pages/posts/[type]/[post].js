@@ -1,11 +1,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Inter } from 'next/font/google';
-import ImageCarousel2 from '../../components/ImageCarousel2';
-import SVP from '../../components/SimpleVideoPlayer';
+import ImageCarousel2 from '../../../components/ImageCarousel2';
+import SVP from '../../../components/SimpleVideoPlayer';
 import ReactMarkdown from 'react-markdown';
 
-import { getPostContent, getAllPostSlugs } from '../../lib/posts';
+import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,7 +60,16 @@ const Post = ({ postData }) => {
 };
 
 export async function getStaticPaths() {
-  const paths = getAllPostSlugs();
+  // Get paths for 'track' and 'race'
+  const trackSlugs = await getAllPostSlugs('track');
+  const raceSlugs = await getAllPostSlugs('race');
+
+  // Combine paths from both post types
+  const paths = [
+    ...trackSlugs.map(slug => ({ params: { type: 'tracks', post: slug.toString() } })),
+    ...raceSlugs.map(slug => ({ params: { type: 'races', post: slug.toString() } }))
+  ];
+
   return {
     paths,
     fallback: true,
@@ -68,7 +77,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostContent(params.post);
+  const { post, type } = params;
+
+  // Fetch post data based on the type and slug
+  const postData = await getPostContent(post, type);
+
   return {
     props: {
       postData,

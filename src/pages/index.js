@@ -17,6 +17,7 @@ export default function Home() {
               <p className="text-black mb-10">{kartingText}</p>
               <div className="flex flex-col">
                 <Button href={"/ranking"} copy={'Znajdź najlepszy tor!'}/>
+                <Button href={"/racing"} copy={'Mój świat wyścigów!'}/>
                 <Button href={"/edukacja"} copy={'Co warto wiedzieć?'}/>
               </div>
             </div>

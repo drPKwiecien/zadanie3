@@ -1,8 +1,8 @@
 [
     {
-        "url": "/posts/ArenaKrak\u00f3w",
+        "url": "/posts/tracks/ArenaKrak\u00f3w",
         "rank": 1,
-        "imageUrl": "/posts/ArenaKrak\u00f3w/IMG_8775cover.jpg",
+        "imageUrl": "/posts/tracks/ArenaKrak\u00f3w/IMG_8775cover.jpg",
         "name": "Arena Krak\u00f3w",
         "type": "Indoor",
         "date": "2024-04-06",
@@ -11,9 +11,9 @@
         "countrycode": "PL"
     },
     {
-        "url": "/posts/CartwayZamosc",
+        "url": "/posts/tracks/CartwayZamosc",
         "rank": 2,
-        "imageUrl": "/posts/CartwayZamosc/Screenshot 2024-01-14 104925cover.png",
+        "imageUrl": "/posts/tracks/CartwayZamosc/Screenshot 2024-01-14 104925cover.png",
         "name": "Cartway Zamo\u015b\u0107",
         "type": "Indoor",
         "date": "2023-06-10",
@@ -22,9 +22,9 @@
         "countrycode": "PL"
     },
     {
-        "url": "/posts/E1_Pozna\u0144",
+        "url": "/posts/tracks/E1_Pozna\u0144",
         "rank": 3,
-        "imageUrl": "/posts/E1_Pozna\u0144/COVERpoznane1.jpg",
+        "imageUrl": "/posts/tracks/E1_Pozna\u0144/COVERpoznane1.jpg",
         "name": "E1 Gokart Pozna\u0144",
         "type": "Mixed",
         "date": "2021-06-07",
@@ -33,7 +33,7 @@
         "countrycode": "PL"
     },
     {
-        "url": "/posts/KCSopot",
+        "url": "/posts/tracks/KCSopot",
         "rank": 4,
         "name": "KartCenterSopot",
         "type": "Outdoor",
@@ -41,12 +41,12 @@
         "score": "5.0",
         "city": "Sopot",
         "countrycode": "PL",
-        "imageUrl": "/posts/KCSopot/SOPOT1cover.jpg"
+        "imageUrl": "/posts/tracks/KCSopot/SOPOT1cover.jpg"
     },
     {
-        "url": "/posts/KartLandGR",
+        "url": "/posts/tracks/KartLandGR",
         "rank": 5,
-        "imageUrl": "/posts/KartLandGR/kartlandCOVER.jpg",
+        "imageUrl": "/posts/tracks/KartLandGR/kartlandCOVER.jpg",
         "name": "Kartland.gr",
         "type": "Outdoor",
         "date": "2021-11-08",
@@ -55,9 +55,9 @@
         "countrycode": "GR"
     },
     {
-        "url": "/posts/PolePositionJanki",
+        "url": "/posts/tracks/PolePositionJanki",
         "rank": 6,
-        "imageUrl": "/posts/PolePositionJanki/72271194_2781424248547933_2671566728667856896_COVER.jpg",
+        "imageUrl": "/posts/tracks/PolePositionJanki/72271194_2781424248547933_2671566728667856896_COVER.jpg",
         "name": "Pole Position Janki",
         "type": "Mixed",
         "date": "2024-04-14",
@@ -66,9 +66,9 @@
         "countrycode": "PL"
     },
     {
-        "url": "/posts/Portimao",
+        "url": "/posts/tracks/Portimao",
         "rank": 7,
-        "imageUrl": "/posts/Portimao/IMG_8464cover.jpg",
+        "imageUrl": "/posts/tracks/Portimao/IMG_8464cover.jpg",
         "name": "Kartodromo Algarve",
         "type": "Outdoor",
         "date": "2024-01-21",
@@ -77,9 +77,9 @@
         "countrycode": "PT"
     },
     {
-        "url": "/posts/Porto",
+        "url": "/posts/tracks/Porto",
         "rank": 8,
-        "imageUrl": "/posts/Porto/porto1COVER.png",
+        "imageUrl": "/posts/tracks/Porto/porto1COVER.png",
         "name": "Cabo do Mundo",
         "type": "Outdoor",
         "date": "2018-04-20",
@@ -88,9 +88,9 @@
         "countrycode": "PT"
     },
     {
-        "url": "/posts/SainzLaRojas",
+        "url": "/posts/tracks/SainzLaRojas",
         "rank": 9,
-        "imageUrl": "/posts/SainzLaRojas/lrCOVER.png",
+        "imageUrl": "/posts/tracks/SainzLaRojas/lrCOVER.png",
         "name": "Sainz LaRojas",
         "type": "Indoor",
         "date": "2019-11-11",
@@ -99,9 +99,9 @@
         "countrycode": "ES"
     },
     {
-        "url": "/posts/SainzMadrid",
+        "url": "/posts/tracks/SainzMadrid",
         "rank": 10,
-        "imageUrl": "/posts/SainzMadrid/csCOVER.png",
+        "imageUrl": "/posts/tracks/SainzMadrid/csCOVER.png",
         "name": "Sainz Madrid",
         "type": "Mixed",
         "date": "2022-05-10",
@@ -110,9 +110,9 @@
         "countrycode": "ES"
     },
     {
-        "url": "/posts/TSKdocklands",
+        "url": "/posts/tracks/TSKdocklands",
         "rank": 11,
-        "imageUrl": "/posts/TSKdocklands/Screenshot 2024-01-14 102823cover.png",
+        "imageUrl": "/posts/tracks/TSKdocklands/Screenshot 2024-01-14 102823cover.png",
         "name": "TeamSport Docklands",
         "type": "Indoor",
         "date": "2022-12-09",
@@ -121,9 +121,9 @@
         "countrycode": "GB"
     },
     {
-        "url": "/posts/gass74",
+        "url": "/posts/tracks/gass74",
         "rank": 12,
-        "imageUrl": "/posts/gass74/gass1COVER.jpg",
+        "imageUrl": "/posts/tracks/gass74/gass1COVER.jpg",
         "name": "Gass74 Karting",
         "type": "Outdoor",
         "date": "2022-12-15",
@@ -132,9 +132,9 @@
         "countrycode": "ES"
     },
     {
-        "url": "/posts/ikbarcelona",
+        "url": "/posts/tracks/ikbarcelona",
         "rank": 13,
-        "imageUrl": "/posts/ikbarcelona/barcelona1cover.jpg",
+        "imageUrl": "/posts/tracks/ikbarcelona/barcelona1cover.jpg",
         "name": "Indoor Karting Barcelona",
         "type": "Indoor",
         "date": "2023-11-09",
@@ -143,9 +143,9 @@
         "countrycode": "ES"
     },
     {
-        "url": "/posts/karting932",
+        "url": "/posts/tracks/karting932",
         "rank": 14,
-        "imageUrl": "/posts/karting932/alicante1cover.jpg",
+        "imageUrl": "/posts/tracks/karting932/alicante1cover.jpg",
         "name": "Karting 932 Alicante",
         "type": "Indoor",
         "date": "2022-12-17",
@@ -154,9 +154,9 @@
         "countrycode": "ES"
     },
     {
-        "url": "/posts/krakowWRT",
+        "url": "/posts/tracks/krakowWRT",
         "rank": 15,
-        "imageUrl": "/posts/krakowWRT/krakowWRT1cover.jpg",
+        "imageUrl": "/posts/tracks/krakowWRT/krakowWRT1cover.jpg",
         "name": "Krak\u00f3w WRT",
         "type": "Indoor",
         "date": "2022-03-15",
