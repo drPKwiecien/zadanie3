@@ -35,7 +35,7 @@ export default function ImageCarousel2({ images }) {
                 alt={media.alt}
                 width={600}
                 height={600}
-                layout="responsive"
+                //layout="responsive"
               />
             ) : (
               // Render a video if the media is a video but does not contain 'LAP' in name

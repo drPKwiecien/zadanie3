@@ -61,13 +61,14 @@ const Post = ({ postData }) => {
 
 export async function getStaticPaths() {
   // Get paths for 'track' and 'race'
-  const trackSlugs = await getAllPostSlugs('track');
-  const raceSlugs = await getAllPostSlugs('race');
+  const trackSlugs = await getAllPostSlugs('tracks');
+  const raceSlugs = await getAllPostSlugs('races');
 
   // Combine paths from both post types
+
   const paths = [
-    ...trackSlugs.map(slug => ({ params: { type: 'tracks', post: slug.toString() } })),
-    ...raceSlugs.map(slug => ({ params: { type: 'races', post: slug.toString() } }))
+    ...trackSlugs.map(slug => ({ params: { type: 'tracks', post: slug } })),
+    ...raceSlugs.map(slug => ({ params: { type: 'races', post: slug } }))
   ];
 
   return {

@@ -17,9 +17,9 @@ export function getAllPostSlugs() {
 
 // This function dynamically imports the data based on the post type
 async function importPostsData(postType) {
-  if (postType === 'track') {
+  if (postType === 'tracks') {
     return (await import('../data/posts.json')).default;
-  } else if (postType === 'race') {
+  } else if (postType === 'races') {
     return (await import('../data/raceposts.json')).default;
   } else {
     throw new Error(`Unknown post type: ${postType}`);
@@ -32,12 +32,8 @@ export async function getPostContent(slug, postType) {
   return postsData[slug];
 }
 
-// Get all slugs for a specific type of post
 export async function getAllPostSlugs(postType) {
   const postsData = await importPostsData(postType);
-  return Object.keys(postsData).map(slug => ({
-    params: {
-      post: slug,
-    },
-  }));
+  return Object.keys(postsData);  // Directly return an array of slug strings
 }
+
