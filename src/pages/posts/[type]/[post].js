@@ -18,45 +18,55 @@ const Post = ({ postData }) => {
 
 
 
-  const renderTextPart = (text) => {
-    return text ? (
-      <div className="text-left p-4 flex-grow flex-basis-3/4">
-        <ReactMarkdown className="text-black">{text}</ReactMarkdown>
-      </div>
-    ) : null;
-  };
-
+/*
 
 
   return (
-    <main className={`${inter.className}`}>
+    <main className={inter.className}>
       <div className="flex flex-col items-center justify-center w-full">
         <div className="text-left p-8 flex-grow flex-basis-3/4">
-          <p className="font-bold text-black font-sans ">{postData.textPart1}</p>
+          <p className="font-bold text-black font-sans">{postData.textPart1}</p>
         </div>
         <div>
           <ImageCarousel2 images={postData.images} />
         </div>
-        {renderTextPart(postData.textPart2)}
-        {renderTextPart(postData.textPart3)}
-        {renderTextPart(postData.textPart4)}
-        {renderTextPart(postData.textPart5)}
-        {renderTextPart(postData.textPart6)}
-        {renderTextPart(postData.textPart7)}
-        {renderTextPart(postData.textPart8)}
-        {renderTextPart(postData.textPart9)}
-        {renderTextPart(postData.textPart10)}
-        {renderTextPart(postData.textPart11)}
-        {renderTextPart(postData.textPart12)}
-        {renderTextPart(postData.textPart13)}
-        {renderTextPart(postData.textPart14)}
+        {[...Array(14)].map((_, i) => {
+          const textPartKey = `textPart${i + 2}`;
+          return postData[textPartKey] ? (
+            <div key={textPartKey} className="text-left p-4 flex-grow flex-basis-3/4">
+              <ReactMarkdown className="text-black">{postData[textPartKey]}</ReactMarkdown>
+            </div>
+          ) : null;
+        })}
         <div>
           <SVP images={postData.images} />
         </div>
- 
       </div>
     </main>
   );
+*/
+
+  return (
+    <main className={inter.className}>
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="text-left p-8 flex-grow flex-basis-3/4">
+          <p className="font-bold text-black font-sans">{postData.textParts[0]}</p>
+        </div>
+        <div>
+          <ImageCarousel2 images={postData.images} />
+        </div>
+        {postData.textParts.slice(1).map((text, index) => (
+          <div key={index} className="text-left p-4 flex-grow flex-basis-3/4">
+            <ReactMarkdown className="text-black">{text}</ReactMarkdown>
+          </div>
+        ))}
+        <div>
+          <SVP images={postData.images} />
+        </div>
+      </div>
+    </main>
+  );
+
 };
 
 export async function getStaticPaths() {

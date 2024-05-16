@@ -51,9 +51,8 @@ def build_json_files(posts_path):
     for rank, slug in enumerate(sorted(os.listdir(posts_path)), start=1):
         post_dir = os.path.join(posts_path, slug)
         if os.path.isdir(post_dir):
-            posts[slug] = {'images': []}
+            posts[slug] = {'images': [], 'textParts': []}
             track = {'url': f'/posts/tracks/{slug}', 'rank': rank}
-            text_part_counter = 1
             cover_image_found = False
             for item in os.listdir(post_dir):
                 if item.endswith(('.docx','.md')):
@@ -63,9 +62,8 @@ def build_json_files(posts_path):
                     track.update(track_info)
                     for part in docx_parts:
                         if not any(key + ':' in part for key in track_info):
-                            part_key = f'textPart{text_part_counter}'
-                            posts[slug][part_key] = part.strip()
-                            text_part_counter += 1
+                            posts[slug]['textParts'].append(part.strip())
+
                 elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic', '.mp4', '.webm', '.mov')):
                     media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else f'video/{item.split(".")[-1]}'
                     posts[slug]['images'].append({
@@ -88,9 +86,8 @@ def build_json_files2(posts_path):
     for rank, slug in enumerate(sorted(os.listdir(posts_path)), start=1):
         post_dir = os.path.join(posts_path, slug)
         if os.path.isdir(post_dir):
-            raceposts[slug] = {'images': []}
+            raceposts[slug] = {'images': [], 'textParts': []}
             race = {'url': f'/posts/races/{slug}', 'rank': rank}
-            text_part_counter = 1
             cover_image_found = False
             for item in os.listdir(post_dir):
                 if item.endswith(('.docx','.md')):
@@ -100,9 +97,7 @@ def build_json_files2(posts_path):
                     race.update(race_info)
                     for part in docx_parts:
                         if not any(key + ':' in part for key in race_info):
-                            part_key = f'textPart{text_part_counter}'
-                            raceposts[slug][part_key] = part.strip()
-                            text_part_counter += 1
+                            raceposts[slug]['textParts'].append(part.strip())
                 elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic', '.mp4', '.webm', '.mov')):
                     media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else f'video/{item.split(".")[-1]}'
                     raceposts[slug]['images'].append({
@@ -120,13 +115,13 @@ def build_json_files2(posts_path):
 def main(post_type):
     posts_path = f'public/posts/{post_type}/'
 
-    if post_type == 'track':
+    if post_type == 'tracks':
         posts_data, tracks_data = build_json_files(posts_path)
         with open('src/data/posts.json', 'w') as f:
             json.dump(posts_data, f, indent=4)
         with open('src/data/tracks.json', 'w') as f:
             json.dump(tracks_data, f, indent=4)
-    elif post_type == 'race':
+    elif post_type == 'races':
         posts_data, tracks_data = build_json_files2(posts_path)
         with open('src/data/raceposts.json', 'w') as f:
             json.dump(posts_data, f, indent=4)
@@ -141,7 +136,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     post_type = sys.argv[1].lower()
-    if post_type not in ["track", "race"]:
+    if post_type not in ["tracks", "races"]:
         print("Error: post_type should be 'track' or 'race'")
         sys.exit(1)
 
