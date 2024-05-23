@@ -40,14 +40,17 @@ export default function ImageCarousel2({ images }) {
             ) : (
               // Render a video if the media is a video but does not contain 'LAP' in name
               <div className='player-wrapper'>
-                  <ReactPlayer
-                    className='react-player'
-                    url={media.src}
-                    width='100%'
-                    height='100%'
-                    controls={true} // Show video controls
-                    playsInline={true} // Optimize for mobile by playing video inline
-                  />
+                <ReactPlayer
+                  url={media.src}
+                  className='react-player'
+                  playing={true}
+                  width='100%'
+                  height='100%'
+                  controls={true}
+                  playsInline={true} // Correct attribute for inline playback in JSX
+                  muted={isMuted}
+                  onError={handleVideoError}
+                />
               </div>
             )}
           </div>
