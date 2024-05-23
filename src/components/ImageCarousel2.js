@@ -9,6 +9,7 @@ export default function ImageCarousel2({ images }) {
   const setActive = (index) => {
     setActiveIndex(index);
   };
+  const [isMuted, setIsMuted] = useState(true);
 
   // Helper function to determine if the URL is a video based on the extension
   const isVideo = (url) => {
@@ -21,6 +22,10 @@ export default function ImageCarousel2({ images }) {
 
   const shouldDisplayItem = (url) => {
     return !isLap(url);
+  };
+
+  const handleVideoError = (e) => {
+    console.error('Error playing video:', e);
   };
 
   return (
