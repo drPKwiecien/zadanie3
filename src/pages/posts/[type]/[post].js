@@ -18,33 +18,6 @@ const Post = ({ postData }) => {
 
 
 
-/*
-
-
-  return (
-    <main className={inter.className}>
-      <div className="flex flex-col items-center justify-center w-full">
-        <div className="text-left p-8 flex-grow flex-basis-3/4">
-          <p className="font-bold text-black font-sans">{postData.textPart1}</p>
-        </div>
-        <div>
-          <ImageCarousel2 images={postData.images} />
-        </div>
-        {[...Array(14)].map((_, i) => {
-          const textPartKey = `textPart${i + 2}`;
-          return postData[textPartKey] ? (
-            <div key={textPartKey} className="text-left p-4 flex-grow flex-basis-3/4">
-              <ReactMarkdown className="text-black">{postData[textPartKey]}</ReactMarkdown>
-            </div>
-          ) : null;
-        })}
-        <div>
-          <SVP images={postData.images} />
-        </div>
-      </div>
-    </main>
-  );
-*/
 
   return (
     <main className={inter.className}>

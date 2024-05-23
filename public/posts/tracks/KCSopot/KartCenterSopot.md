@@ -17,7 +17,7 @@ Tych z 2020 nie pamiętam, ale obecnie (a piszę to w maju 2024) 8 minut kosztuj
 # Czy warto?
 
 ---
-Podsumowując, czy warto? Dla mnie ZAWSZE warto, no, może o ile toru nie udaje zamojska piwnica ***[Przeczytaj recenezję toru w Zamościu](/posts/CartwayZamosc)***. Tor w Sopocie nie urzeka niby niczym nadzwyczajnym, ale czuć tam kartingowego ducha, nie jest to typowa "atrakcja", gdzie wyzysk turysty jest jedynym atrybutem. A że za luksus jeżdżenia w kurorcie trzeba płacić? Życie. 
+Podsumowując, czy warto? Dla mnie ZAWSZE warto, no, może o ile toru nie udaje zamojska piwnica ***[Przeczytaj recenezję toru w Zamościu](/posts/tracks/CartwayZamosc)***. Tor w Sopocie nie urzeka niby niczym nadzwyczajnym, ale czuć tam kartingowego ducha, nie jest to typowa "atrakcja", gdzie wyzysk turysty jest jedynym atrybutem. A że za luksus jeżdżenia w kurorcie trzeba płacić? Życie. 
 ---
 
 **[Link do strony Toru <click>](https://kartcenter.pl/)**

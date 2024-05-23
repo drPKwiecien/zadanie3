@@ -46,6 +46,7 @@ export default function ImageCarousel2({ images }) {
                     width='100%'
                     height='100%'
                     controls // Show video controls
+                    playsinline={true} // Optimize for mobile by playing video inline
                   />
               </div>
             )}
