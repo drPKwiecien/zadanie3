@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import ReactPlayer from 'react-player/lazy'; // Lazy load the video player
 
