@@ -28,6 +28,32 @@ export default function ImageCarousel2({ images }) {
     console.error('Error playing video:', e);
   };
 
+  const handleTouchEnd = useCallback((event) => {
+    const carousel = event.currentTarget;
+    const items = Array.from(carousel.children);
+    const currentItemIndex = items.findIndex(
+      (item) => item.classList.contains('carousel-item-active')
+    );
+
+    if (currentItemIndex !== -1) {
+      setActiveIndex(currentItemIndex);
+    }
+  }, []);
+
+  useEffect(() => {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    carouselItems.forEach((item) => {
+      item.addEventListener('touchend', handleTouchEnd);
+    });
+
+    return () => {
+      carouselItems.forEach((item) => {
+        item.removeEventListener('touchend', handleTouchEnd);
+      });
+    };
+  }, [handleTouchEnd]);
+
+
   return (
     <div>
       <div className="w-96 carousel rounded-box">
