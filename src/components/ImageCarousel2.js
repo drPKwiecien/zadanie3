@@ -5,10 +5,6 @@ import ReactPlayer from 'react-player/lazy'; // Lazy load the video player
 export default function ImageCarousel2({ images }) {
 
   const [activeIndex, setActiveIndex] = useState(0); // State to track active image
-  // Function to set active index
-  const setActive = (index) => {
-    setActiveIndex(index);
-  };
   const [isMuted, setIsMuted] = useState(true);
 
   // Helper function to determine if the URL is a video based on the extension
