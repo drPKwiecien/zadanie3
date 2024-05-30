@@ -1,4 +1,5 @@
 import {PrawaAutorskie} from '../textContent';
+import { MyComponent } from '@/components/Test';
 
 export default function Prawa() {
     return (
@@ -11,8 +12,12 @@ export default function Prawa() {
                 
             </div>
           </div>
+          {/* <div>
+          <MyComponent/>
+          </div> */}
       </main>   
 
 
     )
   }
+
