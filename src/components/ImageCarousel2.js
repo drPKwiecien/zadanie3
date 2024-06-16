@@ -56,9 +56,10 @@ export default function ImageCarousel2({ images }) {
               <Image
                 src={media.src}
                 alt={media.alt}
-                width={1280}
-                height={720}
+                width={1920}
+                height={1080}
                 //layout="fill"
+                objectFit="cover"
               />
             ) : (
               // Render a video if the media is a video but does not contain 'LAP' in name
