@@ -43,6 +43,7 @@ ChangeLog
 04.02.24 - dodałem stronę technikajazdy bazującą na wyszukaniu z YT przez api, ale raczej nie będę tego używać
 04.02.24 - dodanie strony edukacja z kompenentem YouTube 
 09.02.24 - dodanie filtrowania 
+12.08.24 - problemy z wyświetlaniem video - podejrzany LFS
 
 
 
