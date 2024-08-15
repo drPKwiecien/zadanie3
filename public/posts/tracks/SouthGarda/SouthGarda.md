@@ -17,7 +17,7 @@ Zacznijmy od wózka sport „dla ekspertów”, który okazał się zwykłym hal
 
 ---
 
-Większy problem to jakość obsługi. Po zakupie biletu stajemy w kolejce w wąskim korytarzu niczym do bramki na stadionie i obsługa wpuszcza nas jak leci. Tak jest, dorosłych, młodzież, dzieci i ojców z maluchami na taxi. To nie koniec- nie ma żadnej odprawy, nic o flagach, do wózków i wio! Nigdy czegoś takiego nie widziałem. Ten kto mnie zna wie, że jestem człowiekiem czynu a nie przepisów i formalności. Ale do cholery! Puszczać napaleńców z 6-latkami w jednym biegu bez jakiegokolwiek wprowadzenia? Do tego w ilości conajmniej 20 gokartów? Dość powiedzieć, że przez 2 biegi nie miałem choćby jednego czystego kółka. 
+Większy problem to jakość obsługi. Po zakupie biletu stajemy w kolejce w wąskim korytarzu niczym do bramki na stadionie i obsługa wpuszcza nas jak leci. Tak jest, dorosłych, młodzież, dzieci i ojców z maluchami na taxi. To nie koniec- nie ma żadnej odprawy, nic o flagach, do wózków i wio! Nigdy czegoś takiego nie widziałem. Ten kto mnie zna wie, że jestem człowiekiem czynu a nie przepisów i formalności. Ale do cholery! Puszczać napaleńców z 6-latkami w jednym biegu bez jakiegokolwiek wprowadzenia? Do tego w ilości co najmniej 20 gokartów? Dość powiedzieć, że przez 2 biegi nie miałem choćby jednego czystego kółka. 
 
 ---
 
