@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import {omnieText, omnieText2} from '../textContent';
 import Button from '../components/Button';
+import YouTubeEmbed from '../components/YouTube';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,6 +31,11 @@ export default function Omnie() {
             <div className="p-4 flex-grow flex-basis-1/4">
               <Image src="/omnie.jpg" alt="Main Karting Image" width={900} height={600} />
             </div>
+            <div className="p-4 flex-grow">
+               <YouTubeEmbed id="F2DgynI3Xns" />
+            </div>
+
+
           </div>
       </main>   
 
