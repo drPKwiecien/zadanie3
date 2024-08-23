@@ -41,7 +41,7 @@ Nie jestem może jakimś mistrzem kartingu, ale coś tam umiem i fakt, że wszys
 Mimo pewnych rozczarowań uważam, że odpowiedź brzmi "TAK". Dla osoby szukającej fajnej jazdy na czas tor będzie trochę rozczarowaniem, ale np. dla grupy chcąćej rywalizować między sobą jest możliwość zorganizowania Grand Prix, a ponieważ tor jest szeroki, można się ścigać. 
 
 ---
-**[Link YouTube <click>](https://www.youtube.com/watch?v=F2DgynI3Xns)**
+**[Link YouTube <click>](https://www.youtube.com/watch?v=5l_Y3iNcxKc)**
 
 
 ---
