@@ -28,14 +28,6 @@ Zwykle takie kwestie jak udogodnienia nie są dla mnie tak ważne- liczy się mo
 Podsumowując obiekt z pewnością ma potencjał, ale koszmarna organizacja sprawia, że sława i renoma znacząco go wyprzedzają 
 
 ---
-Zapraszam Was teraz na okrążenie oraz trochę "fajerwerków"
-
-
-
-**[Link YouTube <click>](https://www.youtube.com/watch?v=F2DgynI3Xns)**
-
-
----
 
 **[Link do strony Toru <click>](https://www.southgardakarting.it/)**
 ---
@@ -61,3 +53,7 @@ city: Lonato del Garda
 ---
 
 countrycode: IT
+
+---
+
+YTlink: F2DgynI3Xns

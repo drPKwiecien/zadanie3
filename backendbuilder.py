@@ -23,6 +23,7 @@ def read_file(file_path):
 
 def extract_track_info(docx_parts):
     track_info = {}
+    YTube = {} #yt
     keys_for_track = ['name', 'type', 'date', 'score', 'city', 'countrycode']
     for part in docx_parts:
         if ':' in part:
@@ -30,7 +31,15 @@ def extract_track_info(docx_parts):
             key = key.strip().lower()
             if key in keys_for_track:
                 track_info[key] = value.strip()
-    return track_info
+            elif key == 'ytlink': #yt
+                YTube['ytlink'] = value.strip()    
+    return track_info, YTube #yt
+
+
+
+
+
+
 
 def extract_race_info(docx_parts):
     race_info = {}
@@ -44,25 +53,35 @@ def extract_race_info(docx_parts):
     return race_info
 
 
-#funkcja dla track
 def build_json_files(posts_path):
     posts = {}
     tracks = []
     for rank, slug in enumerate(sorted(os.listdir(posts_path)), start=1):
         post_dir = os.path.join(posts_path, slug)
         if os.path.isdir(post_dir):
-            posts[slug] = {'images': [], 'textParts': []}
+            posts[slug] = {'images': [], 'textParts': [], 'YTlink': []}
             track = {'url': f'/posts/tracks/{slug}', 'rank': rank}
             cover_image_found = False
+
             for item in os.listdir(post_dir):
-                if item.endswith(('.docx','.md')):
+                if item.endswith(('.docx', '.md')):
                     docx_path = os.path.join(post_dir, item)
                     docx_parts = read_file(docx_path)
-                    track_info = extract_track_info(docx_parts)
+                    track_info, YTube = extract_track_info(docx_parts)
                     track.update(track_info)
+
+                    # Add YTlink first if it exists
+                    if 'ytlink' in YTube:
+                        posts[slug]['YTlink'].append(YTube['ytlink'])
+
+                    # Add text parts if the part is not in track_info or YTube
                     for part in docx_parts:
-                        if not any(key + ':' in part for key in track_info):
-                            posts[slug]['textParts'].append(part.strip())
+                        part_clean = part.strip()
+                        key_in_info_or_yt = any(
+                            part_clean.lower().startswith(key + ':') for key in {**track_info, **YTube}
+                        )
+                        if not key_in_info_or_yt:
+                            posts[slug]['textParts'].append(part_clean)
 
                 elif item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic', '.mp4', '.webm', '.mov')):
                     media_type = 'image' if item.lower().endswith(('.png', '.jpg', '.jpeg', '.heic')) else f'video/{item.split(".")[-1]}'
@@ -70,7 +89,7 @@ def build_json_files(posts_path):
                         'src': f'/posts/tracks/{slug}/{item}',
                         'alt': f'{media_type.title()} for {slug}',
                         'type': media_type
-                    }) 
+                    })
                     if 'COVER' in item.upper() and not cover_image_found:
                         track['imageUrl'] = f'/posts/tracks/{slug}/{item}'
                         cover_image_found = True

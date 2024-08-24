@@ -19,9 +19,7 @@ Następny jest tor zewnętrzny, gdzie zawodnicy w profesjonalnych wózkach końc
 
 Infrastruktura jest super. Restauracja, prysznice dla zawodników, taras widokowy. Ten obiekt naprawdę ma potencjał. Gdyby wózki były szybsze i nienaganne byłoby 9.5. Gdyby do tego była możliwość wypożyczenia wózka pro, byłoby 10. Ale nie było. Dlatego jest tylko 8/10. Tylko, bo ten obiekt ma potencjał na 10. 
 
----
 
-**[Link YouTube <click>](https://youtu.be/oJu9mMGVpzA)**
 
 
 ---
@@ -50,3 +48,7 @@ city: Wackersdorf
 ---
 
 countrycode: DE
+
+---
+
+YTlink: oJu9mMGVpzA

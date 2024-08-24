@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google';
 import ImageCarousel2 from '../../../components/ImageCarousel2';
 import SVP from '../../../components/SimpleVideoPlayer';
 import ReactMarkdown from 'react-markdown';
+import YouTubeEmbed from '../../../components/YouTube';
+
 
 import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
 
@@ -35,6 +37,13 @@ const Post = ({ postData }) => {
         ))}
         <div>
           <SVP images={postData.images} />
+        </div>
+        <div>
+        {postData.YTlink && postData.YTlink.length > 0 && (
+          <div>
+            <YouTubeEmbed id={postData.YTlink[0]} /> 
+          </div>
+        )}
         </div>
       </div>
     </main>
