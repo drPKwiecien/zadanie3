@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "@vercel/analytics": "^1.1.1",
+    "@vercel/postgres": "^0.9.0",
     "axios": "^1.6.7",
     "express": "^4.18.2",
     "next": "14.0.4",
+    "pg": "^8.12.0",
     "react": "^18",
     "react-dom": "^18",
     "react-flagkit": "^2.0.4",

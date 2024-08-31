@@ -5,9 +5,48 @@ import ImageCarousel2 from '../../../components/ImageCarousel2';
 import SVP from '../../../components/SimpleVideoPlayer';
 import ReactMarkdown from 'react-markdown';
 import YouTubeEmbed from '../../../components/YouTube';
-
-
+import { CommentSection } from '@/components/CommentSection';
 import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
+
+const comments = [
+  {
+    id: 1,
+    name: "Arek",
+    message: "Ciekawy arykuł",
+    createdAt: "06.07.2024",
+    likeCount: 5,
+    wasLikedByMe: true,
+    isReplying: false,
+  },
+  {
+    id: 2,
+    name: "Arek",
+    message: "Ciekawy arykuł",
+    createdAt: "16.07.2024",
+    likeCount: 3,
+    wasLikedByMe: false,
+    isReplying: false,
+  },
+  {
+    id: 4,
+    name: "Arek",
+    message: "Ciekawy arykuł",
+    createdAt: "16.07.2024",
+    likeCount: 3,
+    wasLikedByMe: false,
+    isReplying: true,
+    parentId: 2,
+  },
+  {
+    id: 3,
+    name: "Arek",
+    message: "Ciekawy arykuł",
+    createdAt: "26.07.2024",
+    likeCount: 6,
+    wasLikedByMe: false,
+    isReplying: false,
+  },
+]
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,9 +56,6 @@ const Post = ({ postData }) => {
   if (isFallback) {
     return <div>Loading...</div>;
   }
-
-
-
 
   return (
     <main className={inter.className}>
@@ -38,17 +74,20 @@ const Post = ({ postData }) => {
         <div>
           <SVP images={postData.images} />
         </div>
-        <div>
+        <div className="w-full">
         {postData.YTlink && postData.YTlink.length > 0 && (
-          <div>
-            <YouTubeEmbed id={postData.YTlink[0]} /> 
+          <div className="w-full">
+            <div className='h-4 bg-red-900 w-full'/>
+            <YouTubeEmbed id={postData.YTlink[0]} className="w-full"/> 
           </div>
         )}
+        </div>
+        <div className="w-full px-20">
+          <CommentSection comments={comments} excludeReplies={true} />
         </div>
       </div>
     </main>
   );
-
 };
 
 export async function getStaticPaths() {
