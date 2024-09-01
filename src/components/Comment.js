@@ -1,8 +1,7 @@
-import { ArrowUturnLeftIcon, PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
-import { HeartIcon } from '@heroicons/react/24/solid'
+import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline'
 import { CommentSection } from './CommentSection'
 
-export function Comment({ id, name, createdAt, message, likeCount, wasLikedByMe, comments }) {
+export function Comment({ id, name, createdAt, message, comments }) {
     return (
         <>
             <div className='border rounded-lg p-2 w-full'>
@@ -15,11 +14,7 @@ export function Comment({ id, name, createdAt, message, likeCount, wasLikedByMe,
                         {message}
                     </div>
                     <div className='flex gap-2'>
-                        <HeartIcon className={`w-6 + ${wasLikedByMe && "text-red-500"}`} />
-                        { likeCount }
                         <ArrowUturnLeftIcon className="w-6" />
-                        <PencilSquareIcon className="w-6" />
-                        <XCircleIcon className="w-6" />
                     </div>
                 </div>
             </div>
