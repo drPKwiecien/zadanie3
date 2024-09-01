@@ -8,7 +8,7 @@ export function Comment({ id, name, createdAt, message, comments }) {
                 <div className='p-4'>
                     <div className='flex justify-between'>
                         <span> {name} </span>
-                        <span> {createdAt} </span>
+                        <span> {createdAt.toString()} </span>
                     </div>
                     <div className='p-8'>
                         {message}
