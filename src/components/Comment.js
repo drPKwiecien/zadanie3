@@ -1,13 +1,7 @@
 import { HeartIcon, ArrowUturnLeftIcon, PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import { CommentSection } from './CommentSection'
-import { useState } from 'react'
 
 export function Comment({ id, name, createdAt, message, likeCount, wasLikedByMe, comments }) {
-
-    const [replies, setReplies] = useState([])
-
-    const res = comments.filter(comment => comment.isReplying && comment.parentId == id)
-    setReplies(res)
     
     return (
         <>
@@ -35,9 +29,9 @@ export function Comment({ id, name, createdAt, message, likeCount, wasLikedByMe,
                     </div>
                 </div>
             </div>
-            { replies.length > 0 && (
+            { comments[id]?.length > 0 && (
                 <div className='pl-12'>
-                    <CommentSection comments={replies} excludeReplies={false}/>
+                    <CommentSection comments={comments} parent={id}/>
                 </div>
             )}
         </>
