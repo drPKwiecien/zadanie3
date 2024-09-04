@@ -8,45 +8,44 @@ import YouTubeEmbed from '../../../components/YouTube';
 import { CommentSection } from '@/components/CommentSection';
 import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
 
-const comments = [
-  {
-    id: 1,
-    name: "Arek",
-    message: "Ciekawy arykuł",
-    createdAt: "06.07.2024",
-    likeCount: 5,
-    wasLikedByMe: true,
-    isReplying: false,
-  },
-  {
-    id: 2,
-    name: "Arek",
-    message: "Ciekawy arykuł",
-    createdAt: "16.07.2024",
-    likeCount: 3,
-    wasLikedByMe: false,
-    isReplying: false,
-  },
-  {
-    id: 4,
-    name: "Arek",
-    message: "Ciekawy arykuł",
-    createdAt: "16.07.2024",
-    likeCount: 3,
-    wasLikedByMe: false,
-    isReplying: true,
-    parentId: 2,
-  },
-  {
-    id: 3,
-    name: "Arek",
-    message: "Ciekawy arykuł",
-    createdAt: "26.07.2024",
-    likeCount: 6,
-    wasLikedByMe: false,
-    isReplying: false,
-  },
-]
+const comments = {
+  null: [
+    {
+      id: 1,
+      name: "Arek",
+      message: "Ciekawy arykuł",
+      createdAt: new Date("2022-04-28T11:57:13.911Z"),
+      likeCount: 5,
+      wasLikedByMe: true,
+    },
+    {
+      id: 2,
+      name: "Maciek",
+      message: "Dobra robota!",
+      createdAt: new Date("2022-04-26T20:45:08.000Z"),
+      likeCount: 8,
+      wasLikedByMe: false,
+    },
+    {
+      id: 3,
+      name: "Bartek",
+      message: "A mi się nie podoba",
+      createdAt: new Date("2022-04-25T07:40:51.198Z"),
+      likeCount: 0,
+      wasLikedByMe: false,
+    },
+  ],
+  2: [
+    {
+      id: 4,
+      name: "Cezary",
+      message: "Dobrze mówisz",
+      createdAt: new Date("2022-04-29T18:25:43.511Z"),
+      likeCount: 3,
+      wasLikedByMe: false,
+    },
+  ]
+}
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -83,7 +82,7 @@ const Post = ({ postData }) => {
         )}
         </div>
         <div className="w-full px-20">
-          <CommentSection comments={comments} excludeReplies={true} />
+          <CommentSection comments={comments} parent={null} />
         </div>
       </div>
     </main>
