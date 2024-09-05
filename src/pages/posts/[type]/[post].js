@@ -7,6 +7,8 @@ import ReactMarkdown from 'react-markdown';
 import YouTubeEmbed from '../../../components/YouTube';
 import { CommentSection } from '@/components/CommentSection';
 import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
+import AddComment from '@/components/AddComment'
+
 
 const comments = {
   null: [
@@ -81,7 +83,10 @@ const Post = ({ postData }) => {
           </div>
         )}
         </div>
-        <div className="w-full px-20">
+        <div className="w-full px-10 lg:px-20">
+          <AddComment />
+        </div>
+        <div className="w-full px-10 lg:px-20">
           <CommentSection comments={comments} parent={null} />
         </div>
       </div>

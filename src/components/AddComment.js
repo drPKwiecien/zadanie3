@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 
 
-export default function Comments() {
+export default function AddComment() {
   const [text, setText] = useState('Wpisz komentarz')
   const [name, setName] = useState('Wpisz nick')
 
@@ -14,25 +13,22 @@ const handleSubmit = (event) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <h2 className="m-2">Komentarze</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full mt-2 p-2">
+      <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
         <input
-          className="m-2 bg-slate-100"
+          className="p-2 mb-1 bg-gray-100 border rounded-lg w-full"
           id="name"
           name="name"
-          size="38"
           autoComplete="true"
           onChange={(event) => setName(event.target.value)}
           value={name}
           style={{ border: '1px solid black', padding: '1px' }}
         />
         <textarea
-          className="m-4 bg-slate-100"
+          className="p-2 bg-gray-100 border rounded-lg w-full"
           id="comment"
           name="comment"
           rows="5"
-          cols="40"
           autoComplete="true"
           onChange={(event) => setText(event.target.value)}
           value={text}
@@ -40,7 +36,7 @@ const handleSubmit = (event) => {
         />
         <button
           type="submit"
-          className="btn m-4 bg-slate-500 text-white hover:bg-red-500"
+          className="btn m-4 bg-gray-500 text-white hover:bg-red-500"
         >
           Wyślij komentarz
         </button>
