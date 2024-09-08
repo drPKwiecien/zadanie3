@@ -1,14 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { CommentContext } from '../context/CommentContext';
 
 
 export default function AddComment() {
   const [text, setText] = useState('Wpisz komentarz')
   const [name, setName] = useState('Wpisz nick')
+  const { submitComment } = useContext(CommentContext); 
+
+
+// Function to generate the next ascending ID for replies only
+const getNextCommentId = () => {
+  const allComments = Object.values(comments).flat();
+  if (allComments.length === 0) return 1; // If no comments exist, start at 1
+
+  // Get the highest existing id and add 1 to generate the next id for replies
+  const highestId = Math.max(...allComments.map(comment => comment.id));
+  return highestId + 1;
+};
+
 
 const handleSubmit = (event) => {
     event.preventDefault(); 
     if (text !== 'Wpisz komentarz' && name !== 'Wpisz nick') {
-      console.log(`${name}: ${text}`);
+      const newComment = {
+        id: getNextCommentId(), // If root comment, id is null, otherwise get next id
+        name: name,
+        message: text,
+        createdAt: new Date(),
+        likeCount: 0,
+        wasLikedByMe: false,
+    };
+        submitComment(newComment, parentId); // Use context to add the comment
+
+        // Clear the form fields
+        setText('Wpisz komentarz');
+        setName('Wpisz nick');
     }
   };
 

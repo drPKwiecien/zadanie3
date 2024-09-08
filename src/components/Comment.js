@@ -1,12 +1,13 @@
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline'
 import { CommentSection } from './CommentSection'
 import AddComment from './AddComment'   
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CommentContext } from '../context/CommentContext';
 
-
-export function Comment({ id, name, createdAt, message, comments }) {
+export function Comment({ id, name, createdAt, message }) {
 
     const [isReplying, setIsReplying] = useState(false);
+    const { comments } = useContext(CommentContext);
 
     const handleReplyClick = () => {
         setIsReplying((prevState) => !prevState);
@@ -30,14 +31,14 @@ export function Comment({ id, name, createdAt, message, comments }) {
                     </div>
                     {isReplying && (
                         <div className='mt-4'>
-                            <AddComment />
+                            <AddComment parentId={id} />
                         </div>
                     )}
                 </div>
             </div>
             { comments[id]?.length > 0 && (
                 <div className='pl-12'>
-                    <CommentSection comments={comments} parent={id}/>
+                    <CommentSection parent={id}/>
                 </div>
             )}
         </>
