@@ -42,12 +42,16 @@ export const CommentProvider = ({ children }) => {
     ]
   });
 
-  const submitComment = (newComment, parentId = null) => {
+  const submitComment = (newComment) => {
     setComments((prevComments) => ({
       ...prevComments,
-      [parentId]: [...(prevComments[parentId] || []), newComment],
+      [newComment.parentId]: [...(prevComments[newComment.parentId] || []), newComment],
     }));
   };
+
+  const removeComment = (oldComment) => {
+    // change comments (delete oldComment)
+  }
 
   return (
     <CommentContext.Provider value={{ comments, submitComment }}>

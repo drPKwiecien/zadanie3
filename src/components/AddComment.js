@@ -1,11 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { CommentContext } from '../context/CommentContext';
 
 
-export default function AddComment() {
+export default function AddComment({ pagePath, parentId }) {
   const [text, setText] = useState('Wpisz komentarz')
   const [name, setName] = useState('Wpisz nick')
-  const { submitComment } = useContext(CommentContext); 
+  const formRef = useRef(null);
+  
+  const { submitComment, removeComment } = useContext(CommentContext); 
 
 
 // Function to generate the next ascending ID for replies only
@@ -19,28 +21,45 @@ const getNextCommentId = () => {
 };
 
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
     event.preventDefault(); 
-    if (text !== 'Wpisz komentarz' && name !== 'Wpisz nick') {
+    if (text !== '' && name !== '') {
       const newComment = {
         id: getNextCommentId(), // If root comment, id is null, otherwise get next id
-        name: name,
+        parentId,
+        name,
         message: text,
         createdAt: new Date(),
-        likeCount: 0,
-        wasLikedByMe: false,
-    };
-        submitComment(newComment, parentId); // Use context to add the comment
-
-        // Clear the form fields
-        setText('Wpisz komentarz');
-        setName('Wpisz nick');
+      };
+      // call function to add comment locally
+      submitComment(newComment);
+      
+      try {
+        // call an API to change the database
+        const res = await fetch('/api/comments', {
+          method: 'POST',
+          header: {
+            'Content-Type': 'application/json',
+          },
+          body: {
+            ...newComment
+          }
+        });
+      }
+      catch (err) {
+        // on catch, call function to remove comment locally
+        removeComment(newComment);
+      }
+      // Clear the form fields
+      formRef.current.reset();
+      setText('');
+      setName('');
     }
   };
 
   return (
     <div className="flex flex-col items-center w-full mt-2 p-2">
-      <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col items-center w-full">
         <input
           className="p-2 mb-1 bg-gray-100 border rounded-lg w-full"
           id="name"

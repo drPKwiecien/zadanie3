@@ -9,14 +9,16 @@ import { CommentSection } from '@/components/CommentSection';
 import { getPostContent, getAllPostSlugs } from '../../../lib/posts';
 import AddComment from '@/components/AddComment';
 import { CommentProvider } from '../../../context/CommentContext';
+import { useState } from 'react';
 
 
 const inter = Inter({ subsets: ['latin'] });
 
 const Post = ({ postData }) => {
-  const { isFallback } = useRouter();
+  const router = useRouter();
+  const [page, setPage] = useState(router.asPath);
 
-  if (isFallback) {
+  if (router.isFallback) {
     return <div>Loading...</div>;
   }
 
@@ -47,7 +49,7 @@ const Post = ({ postData }) => {
         )}
         </div>
         <div className="w-full px-10 lg:px-20">
-          <AddComment parentId={null} />
+          <AddComment parentId={null} pagePath={page} />
         </div>
         <div className="w-full px-10 lg:px-20">
           <CommentSection parent={null} />
